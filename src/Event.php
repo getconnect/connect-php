@@ -42,6 +42,9 @@ class Event {
             if (strpos($key, '.') !== false) {
                 $errors[$key] = 'Property names cannot contain a period (.)';
             }
+            if (strcmp($key, '_id') == 0) {
+                $errors[$key] = 'Top level properties cannot be named \'_id\'';
+            }
         }
 
         if (!empty($errors)) {

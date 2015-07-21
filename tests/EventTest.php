@@ -61,6 +61,31 @@ class EventTest extends PHPUnit_Framework_TestCase
         }
     }
 
+    public function testUsingUnderscoreIdInPropertyNameThrowsAnException() {
+
+        $invalidFieldName = '_id';
+
+        $purchase = [
+            'customer' => [
+                'firstName' => 'Tom',
+                'lastName' => 'Smith',
+                'time' => new DateTime(null, new DateTimeZone('UTC'))
+            ],
+            'product' => '12 red roses',
+            $invalidFieldName => 'Invalid Event',
+            'purchasePrice' => 34.95,
+            'timestamp' => new DateTime(null, new DateTimeZone('UTC'))
+        ];
+
+        try {
+            $event = new Event($purchase);
+            $this->fail('Using \'_id\' in property name should throw an exception.');
+        } catch(InvalidPropertyNameException $exception) {
+            $this->assertTrue(true);
+            $this->assertContains($invalidFieldName, $exception->getMessage());
+        }
+    }
+
     public function testThatANestedDateIsConvertedToISO8601() {
 
         $date = new DateTime(null, new DateTimeZone('UTC'));
