@@ -1,0 +1,31 @@
+{
+    "name": "connect/connect-php",
+    "description": "PHP Connect SDK for interacting with the Connect API",
+    "license": "MIT",
+    "keywords": ["Connect","Events","Analytics"],
+    "homepage": "https://getconnect.io",
+    "authors": [
+        {
+            "name": "Connect",
+            "email": "team@getconnect.io",
+            "homepage": "https://getconnect.io/"
+        }
+    ],
+    "require": {
+        "php": ">=5.4",
+        "nategood/httpful": "0.2.*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    },
+    "autoload":{
+        "psr-4": {
+            "Connect\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Connect\\Tests\\": "tests/"
+        }
+    }
+}
