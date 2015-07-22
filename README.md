@@ -12,9 +12,9 @@ The easiest way to install the Connect SDK is to use [Composer](https://getcompo
 
 Add `connect/connect-client` as a dependency and run composer update.
 ```
-“require”: {
+"require": {
     …
-    “connect/connect-client” : “0.*”
+    "connect/connect-client" : "0.*"
     …
 }
 ```
@@ -24,7 +24,7 @@ Add `connect/connect-client` as a dependency and run composer update.
 ### Initialising a client
 
 ```php
-Connect::initialize(‘your-project-id’, ‘your-push-api-key’);
+Connect::initialize('your-project-id', 'your-push-api-key');
 ```
 
 ### Pushing events
@@ -33,36 +33,36 @@ Once you have initialized Connect, you can push events easily:
 
 ```php
 $purchase = [
-	‘customer’ => [
-	  ‘firstName’ => ‘Tom’,
-		‘lastName’ => ‘Smith’
+	'customer' => [
+	   'firstName' => ‘Tom’,
+	   'lastName' => 'Smith'
 	],
-	‘product’ => ’12 red roses’,
-	‘purchasePrice’ => 34.95
+	'product' => '12 red roses',
+	'purchasePrice' => 34.95
 ];
 
-Connect::push(‘purchases’, $purchase);
+Connect::push('purchases', $purchase);
 ```
 
 You can also push events in batches:
 ```php
 $batch = [
-	‘purchases’ => [
+	'purchases' => [
 		[
-			‘customer’ => [
-			  ‘firstName’ => ‘Tom’,
-				‘lastName’ => ‘Smith’
+            'customer' => [
+                'firstName' => 'Tom',
+                'lastName' => 'Smith'
 			],
-			‘product’ => ’12 red roses’,
-			‘purchasePrice’ => 34.95
+			'product' => '12 red roses',
+			'purchasePrice' => 34.95
 		],
 		[
-			‘customer’ => [
-			  ‘firstName’ => ‘Fred’,
-				‘lastName’ => ‘Jones’
+            'customer' => [
+                'firstName' => 'Fred',
+				'lastName' => 'Jones'
 			],
-			‘product’ => ’12 pink roses’,
-			‘purchasePrice’ => 38.95
+			'product' => '12 pink roses',
+			'purchasePrice' => 38.95
 		]
 	]
 ];
