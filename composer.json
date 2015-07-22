@@ -1,5 +1,5 @@
 {
-    "name": "connect/connect-php",
+    "name": "connect/connect-client",
     "description": "PHP Connect SDK for interacting with the Connect API",
     "license": "MIT",
     "keywords": ["Connect","Events","Analytics"],
