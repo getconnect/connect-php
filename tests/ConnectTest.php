@@ -3,12 +3,8 @@
 
 namespace Connect\Tests;
 
-use Connect\Client;
 use Connect\ConfigurationException;
 use Connect\Connect;
-use DateTime;
-use DateTimeZone;
-use Httpful\Request;
 use PHPUnit_Framework_TestCase;
 
 
