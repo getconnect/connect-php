@@ -24,6 +24,8 @@ Add `connect/connect-client` as a dependency and run composer update.
 ### Initialising a client
 
 ```php
+use Connect\Connect;
+
 Connect::initialize('your-project-id', 'your-push-api-key');
 ```
 
