@@ -82,7 +82,13 @@ class APIClient {
         $success = !$response->hasErrors();
         $duplicate = ($response->code == 409);
         $statusCode = $response->code;
-        $errorMessage = $response->body->errorMessage;
+        $errorMessage = null;
+        if ($response->code == 401) {
+            $errorMessage = 'Unauthorised. Please check your Project Id and API Key';
+        }
+        if ($response->body != null && $response->body->errorMessage != null) {
+            $errorMessage = $response->body->errorMessage;
+        }
         return new Response($success, $duplicate, $statusCode, $errorMessage, $event);
     }
 
