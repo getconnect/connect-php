@@ -21,7 +21,7 @@ Add `connect/connect-client` as a dependency and run composer update.
 
 ## Usage
 
-### Initialising a client
+### Initializing a client
 
 ```php
 use Connect\Connect;
