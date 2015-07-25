@@ -1,11 +1,12 @@
 language: php
-
 php:
-  - 5.4
-  - 5.5
-  - 5.6
-  - hhvm
-  - nightly
-
+- 5.4
+- 5.5
+- 5.6
+- hhvm
+- nightly
 before_script:
-  - composer install
+- composer install
+notifications:
+  slack:
+    secure: JwDysncK8ZQnJDLIZkaQ1CJ69pyeTAarZ+XPFkEYn8cgwUPGpYBIu7XvOlfstdj6ONK8mAT5QFAk5mIR7+eoO6M0zQ8YT7Ixwua1lfJUTZzkTrF15y+XQ8iVnUGPeGntLPxkpr4hr7JrkTL+xhnrRz18010hO4FJWRo7CyjnDd0SXHwNKTxFBdn1EaxPA8Hb/dAnFmu811gPfUTTx3/FSst/g5m2HgM+vmur0pmCw7vS2wyStC2BA71JcuaPOLkNirqGR0PyttknJkAKFI+ElGIJxKhbSi4aZZhLDnA9QphXHDDf4sMUEHdSl1WJsp/aoj0yBjomrKLQ9CiU75Yj5BoQW4HCIgQKcgtIppmTmpIcGUTeGVzi2rCKQfQpKuzb3V26wuYWrmTt/Bg+OxVJ8dEDnJ/zSu7GVP9ZQYjDHMu5EG5dK4Z+yd2oFfmyelS8gFmxGyg0JtaMpQSMeT3uxna/vnlk5P5w3kuGGKWuXBEnz+ck0klaQrVQjGwmXVYMfI5sxmlwt202VIMnwjCjafQXhk3woYqvR07eWMmKKYRYsot3kKhaZsCC3DPuWqNg931Q0Ss40qzKga56bk2Iwp+2LuGHwdY5edA/h8QS7Ps2xd5Myh4JWwWzDu/3ip/H3zKVjt7GEJ/unZEMIqXylQ8Qi4xEFbXtpELqJLoy5cw=
