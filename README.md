@@ -1,5 +1,7 @@
 # Connect PHP SDK
 
+[![Join the chat at https://gitter.im/getconnect/connect-php](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/getconnect/connect-php?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Build Status](https://travis-ci.org/getconnect/connect-php.svg)](https://travis-ci.org/getconnect/connect-php)
 [![Latest Stable Version](https://poser.pugx.org/connect/connect-client/version)](https://packagist.org/packages/connect/connect-client)
 
