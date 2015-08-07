@@ -38,7 +38,7 @@ Once you have initialized Connect, you can push events easily:
 ```php
 $purchase = [
 	'customer' => [
-	   'firstName' => ‘Tom’,
+	   'firstName' => 'Tom',
 	   'lastName' => 'Smith'
 	],
 	'product' => '12 red roses',
