@@ -74,6 +74,23 @@ $batch = [
 Connect::push($batch);
 ```
 
+### Generating filtered keys
+
+To generate a filtered key
+```php
+$masterKey = 'YOUR_MASTER_KEY';
+$keyDefinition = [
+    'filters' => [
+        'type' => 'cycling'
+    ],
+    'canQuery' => True,
+    'canPush' => True
+];
+	
+$filteredKey = Connect::generateFilteredKey($keyDefinition, $masterKey);
+print $filtered_key;
+``` 
+
 ### Exception handling
 
 When pushing events, exceptions could be thrown, so you should either ignore or handle those exceptions gracefully.
