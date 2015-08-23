@@ -76,19 +76,19 @@ Connect::push($batch);
 
 ### Generating filtered keys
 
-To generate a filtered key.
+To generate a filtered key
 ```php
 $masterKey = 'YOUR_MASTER_KEY';
 $keyDefinition = [
-		'filters' => [
-			'type' => 'cycling'
-		],
-		"canQuery" => True,
-		"canPush" => True
-	];
+    'filters' => [
+        'type' => 'cycling'
+    ],
+    'canQuery' => True,
+    'canPush' => True
+];
 	
 $filteredKey = Connect::generateFilteredKey($keyDefinition, $masterKey);
-print $filtered_key
+print $filtered_key;
 ``` 
 
 ### Exception handling
