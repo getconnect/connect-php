@@ -1,5 +1,4 @@
 <?php
-
 namespace Connect;
 
 class Connect {
@@ -44,5 +43,16 @@ class Connect {
         }
         return self::$client->push($collectionNameOrBatch, $eventOrEvents);
     }
+    
+    /**
+    * Generate a filtered key to use with the Connect API.
+    * @param array $definition The filtered key definition
+    * @param string $masterKey The master key for the Connect project
+    * @return String
+    */
+    public static function generateFilteredKey($definition, $masterKey) {
+        return Security::generateFilteredKey($definition, $masterKey);
+    }
+
 }
 
