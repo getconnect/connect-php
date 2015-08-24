@@ -88,7 +88,7 @@ $keyDefinition = [
 ];
 	
 $filteredKey = Connect::generateFilteredKey($keyDefinition, $masterKey);
-print $filtered_key;
+print $filteredKey;
 ``` 
 
 ### Exception handling
